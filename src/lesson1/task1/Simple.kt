@@ -63,8 +63,8 @@ fun main() {
 fun seconds(hours: Int, minutes: Int, seconds: Int): Int {
     val a = hours * 3600
     val b = minutes * 60
-    val s = a + b + seconds
-    return s
+    val sum = a + b + seconds
+    return sum
 }
 
 /**
@@ -90,7 +90,11 @@ fun angleInRadian(deg: Int, min: Int, sec: Int): Double = TODO()
  * Найти длину отрезка, соединяющего точки на плоскости с координатами (x1, y1) и (x2, y2).
  * Например, расстояние между (3, 0) и (0, 4) равно 5
  */
-fun trackLength(x1: Double, y1: Double, x2: Double, y2: Double): Double = TODO()
+fun trackLength(x1: Double, y1: Double, x2: Double, y2: Double): Double {
+    val x = x2 - x1
+    val y = y2 - y1
+    return sqrt(x*x+y*y)
+}
 
 /**
  * Простая
@@ -99,8 +103,8 @@ fun trackLength(x1: Double, y1: Double, x2: Double, y2: Double): Double = TODO()
  * Определить третью цифру справа в этом числе (в данном случае 8).
  */
 fun thirdDigit(number: Int): Int {
-    val a = number%1000
-    val t = a/100
+    val a = number % 1000
+    val t = a / 100
     return t
 }
 
